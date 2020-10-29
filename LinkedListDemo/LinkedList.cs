@@ -4,9 +4,9 @@ using System.Text;
 
 namespace LinkedListDemo
 {
-    class LinkedList
+    public class LinkedList
     {
-        public Node head;
+        Node head;
 
         internal void AddToStack(int data)
         {
@@ -109,6 +109,20 @@ namespace LinkedListDemo
                 temp.next = null;
                 return;
             }
+        }
+
+        public Node Search(int value)
+        {
+            Node temp = this.head;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    return temp;
+                }
+                temp = temp.next;
+            }
+            return null;
         }
     }
     
