@@ -169,6 +169,31 @@ namespace LinkedListDemo
             }
             return size;
         }
+
+        public void AddWithSorting(int data)
+        {
+            Node node = new Node(data);
+            if (this.head == null)
+                this.head = node;
+            else
+            {
+                if (this.head.data > data)
+                {
+                    node.next = this.head;
+                    this.head = node;
+                }
+                else
+                {
+                    Node temp = this.head;
+                    while (temp.next != null && temp.next.data < data)
+                    {
+                        temp = temp.next;
+                    }
+                    node.next = temp.next;
+                    temp.next = node;
+                }
+            }
+        }
     }
     
 }
