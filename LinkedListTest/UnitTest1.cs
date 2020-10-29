@@ -30,5 +30,20 @@ namespace LinkedListTest
             Node expected = list.Search(40);
             Assert.AreEqual(actual, expected);
         }
+
+        [TestMethod]
+        public void GivenALinkedListNumbers_WhenDeletingANodeWithGivenValue_ShouldPassLinkedListResult()
+        {
+            int expected = 70;
+            LinkedList list = new LinkedList();
+            list.AddToBack(56);
+            list.AddToBack(30);
+            list.AddToBack(40);
+            list.AddToBack(70);
+            list.DeleteWithValue(40);
+            Node node = list.Search(30);
+            int actual = node.next.data;
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
