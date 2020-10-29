@@ -14,11 +14,18 @@ namespace LinkedListDemo
             //stack.Display();
 
             //Inserting number at specific position
+            //list.AddToBack(56);
+            //list.AddToBack(70);
+            //list.InsertAtParticularPosition(2, 30);
+            //list.Display();
+
             list.AddToBack(56);
+            list.AddToBack(30);
             list.AddToBack(70);
-            list.InsertAtParticularPosition(2, 30);
             list.Display();
 
+            list.DeleteFisrtElement();
+            list.Display();
         }
     }
 }

@@ -81,6 +81,18 @@ namespace LinkedListDemo
                     Console.WriteLine("Position out of range");
             }
         }
+
+        public void DeleteFisrtElement()
+        {
+            if (this.head == null)
+                Console.WriteLine("List is empty");
+            else
+            {
+                Console.WriteLine("Value removed from head is "+ this.head.data);
+                this.head = this.head.next;
+                return;
+            }
+        }
     }
     
 }
