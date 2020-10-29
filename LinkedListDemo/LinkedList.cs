@@ -93,6 +93,23 @@ namespace LinkedListDemo
                 return;
             }
         }
+
+        public void DeleteLastElement()
+        {
+            Node temp = this.head;
+            if (temp == null)
+                Console.WriteLine("List is empty");
+            else
+            {
+                while (temp.next.next != null)
+                {
+                    temp = temp.next;
+                }
+                Console.WriteLine("Value removed from back is "+temp.next.data);
+                temp.next = null;
+                return;
+            }
+        }
     }
     
 }

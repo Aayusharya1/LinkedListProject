@@ -24,7 +24,8 @@ namespace LinkedListDemo
             list.AddToBack(70);
             list.Display();
 
-            list.DeleteFisrtElement();
+            //list.DeleteFisrtElement();
+            list.DeleteLastElement();
             list.Display();
         }
     }
